@@ -1,3 +1,17 @@
+<!--
+Data: 15/03/2026
+Autor: Gabriel Macedo
+Objetivo: Informar se um ano é bissexto
+
+Exercício 10 - Ano Bissexto
+Leia um ano e informe se ele é bissexto.
+
+Um ano é bissexto se:
+
+É múltiplo de 400
+ou
+É múltiplo de 4 e não é múltiplo de 100
+-->
 <?php
 
 function verificarBissexto($ano) {
