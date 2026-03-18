@@ -1,13 +1,26 @@
+<!--
+Data: 16/03/2026
+Autor: Gabriel Macedo
+Objetivo: Receber uma lista de numeros e retornar a média aritmética
+
+Exercício 9 - Média Aritmética com Função
+Crie uma função:
+
+function media($v)
+Que receba uma lista de números reais e retorne a média aritmética.
+-->
+
+
 <?php
 
 /**
  * Função que recebe uma lista (array) e retorna a média
  */
 function media($v) {
-    // Somamos todos os valores do array
+    // Soma todos os valores do array
     $soma = array_sum($v);
     
-    // Contamos quantos números existem na lista
+    // Conta quantos números existem na lista
     $quantidade = count($v);
 
     // Evita erro de divisão por zero caso o array esteja vazio
@@ -19,7 +32,7 @@ function media($v) {
     return $soma / $quantidade;
 }
 
-// --- ÁREA DE TESTE (O que aparecerá no seu navegador) ---
+// --- teste (o que aparecerá no navegador) ---
 
 $meusNumeros = [10, 5, 7, 8.5]; // Lista de números reais
 $resultado = media($meusNumeros); // Chamada da função
