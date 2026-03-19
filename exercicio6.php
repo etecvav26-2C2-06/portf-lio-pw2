@@ -7,7 +7,7 @@ $proximo = 1;
 $resultado = [];
 
 for ($i = 0; $i < $n; $i++) {
-    //armazenamos o termo atual na nossa lista de resultados
+    //armazenamento dos termos
     $resultado[] = $atual;
     
 //lógica da sequência:
