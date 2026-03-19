@@ -1,62 +1,63 @@
-<!--
-Data: 18/03/2026
-Autor: Davi de Jesus
-Objetivo: Ler um número n e imprima n linhas 
-
-Exercício 4 - Triângulo Numérico
-Leia um número n e imprima n linhas no seguinte formato (exemplo para n = 6):
-
-1
-1 2
-1 2 3
-1 2 3 4
-1 2 3 4 5
-1 2 3 4 5 6
--->
 <?php
+// Lógica de Processamento (Sempre no topo)
+$resultado = "";
+$exibirResultado = false;
 
-// lendo os dados do terminal
-echo "digite o primeiro número: ";
-$num1 = (float) fgets(STDIN);
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $n1 = (float)$_POST['n1'];
+    $n2 = (float)$_POST['n2'];
+    $op = $_POST['op'];
+    $exibirResultado = true;
 
-echo "digite o operador (+, -, *, /): ";
-$operador = trim(fgets(STDIN));
-
-echo "digite o segundo número: ";
-$num2 = (float) fgets(STDIN);
-
-$resultado = 0;
-$erro = false;
-
-// processando a operação
-switch ($operador) {
-    case '+':
-        $resultado = $num1 + $num2;
-        break;
-    case '-':
-        $resultado = $num1 - $num2;
-        break;
-    case '*':
-        $resultado = $num1 * $num2;
-        break;
-    case '/':
-        //verificação para evitar erro de divisao
-        if ($num2 != 0) {
-            $resultado = $num1 / $num2;
-        } else {
-            echo "erro: divisão por zero não é permitida.\n";
-            $erro = true;
-        }
-        break;
-    default:
-        echo "operador inválido!\n";
-        $erro = true;
+    switch ($op) {
+        case "+": $resultado = $n1 + $n2; break;
+        case "-": $resultado = $n1 - $n2; break;
+        case "*": $resultado = $n1 * $n2; break;
+        case "/": 
+            $resultado = ($n2 == 0) ? "Erro: Divisão por zero!" : ($n1 / $n2); 
+            break;
+        default: $resultado = "Operação inválida";
+    }
 }
-
-// resultado
-if (!$erro) {
-    echo "---------------------------\n";
-    echo "resultado: $num1 $operador $num2 = $resultado\n";
-}
-
 ?>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora PHP</title>
+    <style>
+        body { font-family: Arial; padding: 20px; line-height: 1.6; }
+        .resultado { margin-top: 20px; padding: 10px; background: #f4f4f4; border-left: 5px solid #2ecc71; }
+        input, select, button { padding: 10px; margin: 5px 0; }
+    </style>
+</head>
+<body>
+
+    <h2>Calculadora Aritmética</h2>
+    
+    <form method="POST">
+        <input type="number" step="any" name="n1" placeholder="Número 1" required 
+               value="<?= isset($_POST['n1']) ? $_POST['n1'] : '' ?>">
+        
+        <select name="op">
+            <option value="+" <?= (isset($_POST['op']) && $_POST['op'] == '+') ? 'selected' : '' ?>>+</option>
+            <option value="-" <?= (isset($_POST['op']) && $_POST['op'] == '-') ? 'selected' : '' ?>>-</option>
+            <option value="*" <?= (isset($_POST['op']) && $_POST['op'] == '*') ? 'selected' : '' ?>>*</option>
+            <option value="/" <?= (isset($_POST['op']) && $_POST['op'] == '/') ? 'selected' : '' ?>>/</option>
+        </select>
+
+        <input type="number" step="any" name="n2" placeholder="Número 2" required 
+               value="<?= isset($_POST['n2']) ? $_POST['n2'] : '' ?>">
+        
+        <button type="submit">Calcular</button>
+    </form>
+
+    <?php if ($exibirResultado): ?>
+        <div class="resultado">
+            <strong>Resultado:</strong> <?= $resultado ?>
+        </div>
+    <?php endif; ?>
+
+</body>
+</html>
