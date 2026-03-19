@@ -1,3 +1,8 @@
+Data 18/03/2026.
+Autor: Nícolas De Oliveira.
+Objetivo: Exercício 05 - Leitura de 5 valores inteiros com fator.
+Faça um progarama que Leia 5 números inteiros e mostre a soma dos fatoriais desses números.
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
