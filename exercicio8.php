@@ -4,34 +4,52 @@
 Objetivo: 
 Exercício 8 - Soma de 0 até N com Função
 Faça um programa que receba um número inteiro, determinando a soma de 0 até tal número (incluso) por meio de uma função soma(n) que retorne tal soma.
-*/
+-->
+
 
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercício 8</title>
+    <title>Soma de Vetores</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; }
+        .campo { margin-bottom: 10px; }
+        .resultado { margin-top: 20px; font-weight: bold; color: blue; }
+    </style>
 </head>
 <body>
+
+    <h2>Digite 5 números inteiros:</h2>
     
-<?php
+    <form method="POST">
+        <?php for ($i = 0; $i < 5; $i++): ?>
+            <div class="campo">
+                <label>Número <?= $i + 1 ?>:</label>
+                <input type="number" name="numeros[]" required 
+                       value="<?= isset($_POST['numeros'][$i]) ? $_POST['numeros'][$i] : '' ?>">
+            </div>
+        <?php endfor; ?>
+        
+        <button type="submit">Calcular Soma</button>
+    </form>
 
-function soma ($n) {
-    $total = 0; // 1. Variável que guarda o valor da soma
-    for ($i = 0; $i <= $n; $i++){
-        $total = $total + $i; // 2. Soma cada número ao total acumulado
+    <?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $numeros = $_POST['numeros']; // Recebe o array do formulário
+        $somaTotal = 0;
+
+        // Estrutura de repetição para somar os valores
+        foreach ($numeros as $num) {
+            $somaTotal += (int)$num;
+        }
+
+        echo "<div class='resultado'>A soma total é: $somaTotal</div>";
+        
+        // Exibindo os números digitados (opcional)
+        echo "<p>Números digitados: " . implode(", ", $numeros) . "</p>";
     }
-    return $total;
-}
+    ?>
 
-$numero_informado = 10;
-$resultado = soma($numero_informado); // 3. Executa a função e guarda o resultado
-
-echo "Exercicio 8 - Soma de 0 até N <br>";
-echo "N: " . $numero_informado . "<br>";
-echo "A soma total: " . $resultado;
-
-?>
 </body>
 </html>
