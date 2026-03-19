@@ -1,25 +1,29 @@
-<!--
-Data: 18/03/2026
-Autor: Felipe Abreu
-Objetivo: Verificar se um numero digitado esta dentro de um intervalo especifico
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Verificador de Intervalo</title>
+</head>
+<body>
+    <h2>Verificar se o número está entre 100 e 200</h2>
+    
+    <!-- Formulário para o usuário digitar -->
+    <form method="POST">
+        <input type="number" name="valor" placeholder="Digite um número" required>
+        <button type="submit">Verificar</button>
+    </form>
 
-Exercício 1 - Intervalo entre 100 e 200
-Leia um número e diga se este número está no intervalo entre 100 e 200.
--->
-<?php
+    <?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        // Pega o valor do formulário via POST
+        $num = $_POST['valor'];
 
-// pede um numero para o usoário
-echo "Digite um numero";
-$num = readline();
-
-// verificar se esta entre 100 e 200
-if ($num >=100 && $num <=200) {
-  
-    // se estiver no intervalo
-  echo "O número" . $num . "está entre 100 e 200\n";
-  
-} else {
-  
-    // se nao estiver no intervalo
-  echo "O número" . $num . " não está entre 100 e 200\n";
-}
+        // Lógica de verificação
+        if ($num >= 100 && $num <= 200) {
+            echo "<p style='color: green;'>O número <strong>$num</strong> está entre 100 e 200.</p>";
+        } else {
+            echo "<p style='color: red;'>O número <strong>$num</strong> NÃO está entre 100 e 200.</p>";
+        }
+    }
+    ?>
+</body>
+</html>
