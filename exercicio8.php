@@ -7,43 +7,31 @@ Faça um programa que receba um número inteiro, determinando a soma de 0 até t
 */
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Exercício 8</title>
 </head>
 <body>
     
-</body>
-</html>
-
-
-
-
-
-
-
 <?php
 
- 
 function soma ($n) {
-    $total = 0;
+    $total = 0; // 1. Variável que guarda o valor da soma
     for ($i = 0; $i <= $n; $i++){
-        $total = $total + $i;
+        $total = $total + $i; // 2. Soma cada número ao total acumulado
+    }
+    return $total;
 }
-return $total;
-}
+
 $numero_informado = 10;
-$resultado = soma($numero_informado);
+$resultado = soma($numero_informado); // 3. Executa a função e guarda o resultado
 
 echo "Exercicio 8 - Soma de 0 até N <br>";
-echo "N:".$numero_informado . "<br>";
-echo "A soma total:".$resultado;
-
-
-
-
-
+echo "N: " . $numero_informado . "<br>";
+echo "A soma total: " . $resultado;
 
 ?>
+</body>
+</html>
