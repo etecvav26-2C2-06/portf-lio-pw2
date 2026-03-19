@@ -8,29 +8,48 @@ Depois, o programa deve converter para a outra unidade.
 
 Fórmula: C = 5/9 × (F − 32)
 -->
-<?php
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Conversor de Temperatura</title>
+</head>
+<body>
+    <h2>Conversor de Temperatura</h2>
+    
+    <form method="POST">
+        <input type="number" step="any" name="valor" placeholder="Temperatura" required>
+        
+        <select name="unidade">
+            <option value="c">Celsius para Fahrenheit</option>
+            <option value="f">Fahrenheit para Celsius</option>
+        </select>
+        
+        <button type="submit">Converter</button>
+    </form>
 
-// Pergunta a unidade e limpaa espaços extras
-echo "C p/ Celsius ou F p/ Fahrenheit: ";
-$unidade = trim(readline);
-  echo "Qual o valor da temperatura? ";
-  $valor = (float)readline();
+    <hr>
 
-// Converte de C para F
-if (strtolower($unidade) == "c") {
-    $f = ($valor * 1.8) + 32;
-    echo "Fahrenheit: " . "°F\n"
+    <?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $valor = (float)$_POST['valor'];
+        $unidade = strtolower($_POST['unidade']);
+        $resultado = "";
 
-} 
-// Converte de F para C
-else if (strtolower($unidade) == "f") {
-    $c = ($valor - 32) / 1.8;
-    echo "Celsius: " . $c . "°C\n"
+        if ($unidade == "c") {
+            // C para F: (C * 1.8) + 32
+            $f = ($valor * 1.8) + 32;
+            $resultado = "<strong>$valor °C</strong> equivale a <strong>$f °F</strong>";
+        } 
+        else if ($unidade == "f") {
+            // F para C: (F - 32) / 1.8
+            $c = ($valor - 32) / 1.8;
+            $resultado = "<strong>$valor °F</strong> equivale a <strong>" . number_format($c, 2) . " °C</strong>";
+        }
 
-} 
-// Caso o usuário digite qualquer outra coisa
-      } else {
-    echo "Opção inválida.\n";
+        echo "<h3>Resultado:</h3>" . $resultado;
+    }
+    ?>
+</body>
+</html>
 
-
-?>
