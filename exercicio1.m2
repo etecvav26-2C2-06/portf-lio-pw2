@@ -1,3 +1,8 @@
+Data: 28/03/2026
+Autor: Felipe Abreu
+
+
+
 Cookies e sessions no PHP servem para guardar dados entre paginas em um site,
 mas cada um funciona de um jeito.
 
