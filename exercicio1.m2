@@ -1,7 +1,8 @@
 Data: 28/03/2026
 Autor: Felipe Abreu
 
-
+Exercício 1 — Pergunta conceitual
+Explique a diferença entre cookies e sessions no PHP.
 
 Cookies e sessions no PHP servem para guardar dados entre paginas em um site,
 mas cada um funciona de um jeito.
