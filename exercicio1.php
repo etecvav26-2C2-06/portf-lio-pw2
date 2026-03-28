@@ -1,6 +1,9 @@
 Data: 18/03/2026
 Autor: Felipe Abreu
-Objetivo: Leia um numero e mostre se esta no intervalo de 100/200
+Objetivo: Leia um numero e mostre se esta no intervalo de 100 e 200
+
+Exercício 1 - Intervalo entre 100 e 200
+Faça um programa que receba um número e diga se este número está no intervalo entre 100 e 200
 
 <! html>
 <html lang="pt-br">
