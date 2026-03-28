@@ -1,4 +1,8 @@
-<!DOCTYPE html>
+Data: 18/03/2026
+Autor: Felipe Abreu
+Objetivo:
+
+<! html>
 <html lang="pt-br">
 <head>
     <title>Verificador de Intervalo</title>
