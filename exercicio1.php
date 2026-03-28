@@ -1,6 +1,6 @@
 Data: 18/03/2026
 Autor: Felipe Abreu
-Objetivo:
+Objetivo: Leia um numero e mostre se esta no intervalo de 100/200
 
 <! html>
 <html lang="pt-br">
