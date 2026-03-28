@@ -1,9 +1,9 @@
+Data: 28/03/2026
+Autor: Felipe Abreu
 
 
 
-
-
- Em uma loja virtual, cookies e sessions podem trabalhar juntos para melhorar a experiência do usuário e manter os dados organizados e seguros.Para manter o usuário logado, 
+ Em virtual, cookies e sessions podem trabalhar juntos para melhorar a experiência do usuário e manter os dados organizados e seguros.Para manter o usuário logado, 
 o mais comum é usar sessions. Quando a pessoa faz login, o sistema guarda as informações dela no servidor, e no navegador fica só um “código” que identifica essa sessão. Isso é mais seguro, 
 porque os dados importantes não ficam expostos. Se quiser aquela opção de “lembrar-me”, dá pra usar um cookie, mas só com um identificador, nunca com dados sensíveis.
 
