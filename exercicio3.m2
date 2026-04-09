@@ -1,4 +1,4 @@
-
+                 quem for fazer apagar tudo e fazer exercico 3
 
 
 Quando falamos sobre manter o usuário logado, a nossa prioridade absoluta é a proteção. Por isso, usamos as Sessions. É como se, ao entrar na loja e se identificar, 
