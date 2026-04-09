@@ -1,0 +1,9 @@
+O que aconteceu em cada etapa e o motivo do comportamento:
+
+Primeira execução: A página exibiu "Cookie ainda não disponível.". Isso acontece porque a função setcookie() envia o cookie no cabeçalho da resposta HTTP, mas a variável $_COOKIE só consegue ler os cookies que vieram na requisição do navegador. Como era o primeiro acesso, o navegador ainda não tinha o cookie para enviar.
+
+Atualização (F5): A página exibiu "Valor do cookie: 1". Agora o navegador já possuía o cookie salvo e o enviou na nova requisição para o servidor.
+
+Ferramentas do desenvolvedor: Na aba Application/Storage do navegador, o cookie "contador" foi listado com o valor "1" e sua data de expiração, confirmando que foi salvo no lado do cliente.
+
+Limpar cookies e atualizar: O comportamento retornou ao da etapa 1 (exibindo "Cookie ainda não disponível"), pois o dado foi apagado do navegador, forçando o servidor a iniciar o ciclo de criação do cookie novamente.
