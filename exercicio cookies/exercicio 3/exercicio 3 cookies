@@ -1,3 +1,6 @@
+Data: 09/04/2026
+Autor: Gabriel Macedo
+
 O que aconteceu em cada etapa e o motivo do comportamento:
 
 Primeira execução: A página exibiu "Cookie ainda não disponível.". Isso acontece porque a função setcookie() envia o cookie no cabeçalho da resposta HTTP, mas a variável $_COOKIE só consegue ler os cookies que vieram na requisição do navegador. Como era o primeiro acesso, o navegador ainda não tinha o cookie para enviar.
