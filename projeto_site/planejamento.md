@@ -216,7 +216,7 @@ Versão simplificada para ícone: apenas a nota musical com gradiente, usada em 
 
 🏢 Nome 
 
-SomVibe Música Ltda. 
+CodeC Música Ltda. 
 
 📞 Telefone 
 
@@ -224,11 +224,11 @@ SomVibe Música Ltda.
 
 📧 E-mail 
 
-contato@somvibe.com.br 
+contato@CodeC.com.br 
 
 🌐 Site 
 
-www.somvibe.com.br 
+www.CodeC.com.br 
 
 📍 Endereço 
 
@@ -236,19 +236,19 @@ Rua das Melodias, 432 — Vila Musical, São Paulo/SP — CEP: 01234-567
 
 📸 Instagram 
 
-@somvibe.music 
+@CodeC.music 
 
 ▶️ YouTube 
 
-youtube.com/@SomVibeOficial 
+youtube.com/@CodeCOficial 
 
 🎵 TikTok 
 
-@somvibe 
+@CodeC
 
 💼 LinkedIn 
 
-linkedin.com/company/somvibe 
+linkedin.com/company/codec 
 
  
 
@@ -256,7 +256,7 @@ linkedin.com/company/somvibe
 
  
 
-O site SomVibe terá 5 páginas principais, com navegação clara e intuitiva: 
+O site CodeC terá 5 páginas principais, com navegação clara e intuitiva: 
 
  
 
@@ -268,7 +268,7 @@ Seção de destaques: cursos em promoção, produtos mais vendidos
 
 Carrossel de depoimentos de alunos e clientes 
 
-Seção 'Por que escolher o SomVibe?' com ícones e descrições 
+Seção 'Por que escolher o CodeC?' com ícones e descrições 
 
 Mini-galeria de fotos de shows e eventos 
 
@@ -278,7 +278,7 @@ Rodapé com links rápidos, redes sociais e newsletter
 
 ℹ️ 2. Sobre (Nossa História) 
 
-História da empresa SomVibe: quando foi fundada e sua missão 
+História da empresa CodeC: quando foi fundada e sua missão 
 
 Fotos da equipe e dos professores com mini-bios 
 
